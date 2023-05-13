@@ -42,22 +42,15 @@ export default function Textform(props) {
         }
         const handleCaclick = () =>
         {
-    //         if (text.length === 0) {
-    //             setText("");
-    //             props.showAlert("Please Enter Some Text!", "warning");
-    //           } else {
-    //             const sentenceCase1 = (text) => text[0].toUpperCase() + text.slice(1).toLowerCase();
-    //             const words = text.trim().text.split(/\s+/).map(sentenceCase1);
-    //             const capitalizedSentence = words.join(' ');
-    //             setText(capitalizedSentence);
-    //             props.showAlert("Converted Into Capitalized Text!", "success");
-    //           }
     if (text.trim().length === 0) {
       setText("");
       props.showAlert("Please Enter Some Text!", "warning");
     } else {
-      const sentenceCase1 = (text) => text[0].toUpperCase() + text.slice(1).toLowerCase();
-      const words = text.trim().split(/\s+/).map(sentenceCase1);
+      const sentenceCase1 = (text) => { 
+        if(text.trim().length) return text[0].toUpperCase() + text.slice(1).toLowerCase() 
+        else return text
+      };
+      const words = text.split(' ').map(sentenceCase1);
       const capitalizedSentence = words.join(' ');
       setText(capitalizedSentence);
       props.showAlert("Converted Into Capitalized Text!", "success");
