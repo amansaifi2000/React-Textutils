@@ -1,5 +1,4 @@
-// import './App.css';
-// import About from './Components/About';
+
 import { useState } from 'react';
 import Alert from './Components/Alert';
 import Navbar from './Components/Navbar';
