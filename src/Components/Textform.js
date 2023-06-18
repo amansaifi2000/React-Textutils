@@ -40,6 +40,11 @@ export default function Textform(props) {
                 setText(clearText)
                 props.showAlert("Your Text Has Been Cleared!", "success")
         }
+        const handleCoclick = () =>
+        {
+        navigator.clipboard.writeText(text)
+                props.showAlert("Your Text Has Been Copied!", "success")
+        }
         const handleCaclick = () =>
         {
     if (text.trim().length === 0) {
@@ -82,11 +87,12 @@ export default function Textform(props) {
 <button className="btn btn-primary mx-1 my-1" onClick={handleSeclick}>Sentence Case</button>
 <button className="btn btn-primary mx-1 my-1" onClick={handleCaclick}>Capital Letters</button>
 <button className="btn btn-primary mx-1 my-1" onClick={handleExclick}>Remove Extra Spaces</button>
+<button className="btn btn-primary mx-1 my-1" onClick={handleCoclick}>Copy Text</button>
 <button className="btn btn-primary mx-1 my-1" onClick={handleDeclick}>Clear Text</button>
 </div>
 <div className = "Container my-3" style = {{color : props.mode === 'dark'?'white':'#092f48'}}>
 <h2>Text Summary</h2>
-<p>{text.trim().length === 0 ? 0 : text.trim().split(" ").length} words and {text.length} characters</p>
+<p>{text.trim().length === 0 ? 0 : text.trim().split(/\s+/).length} words and {text.length} characters</p>
 { text.length > 0 && <p>{(text.length / 200).toFixed(1)} Minutes to read</p> }
 <h2>Preview Text</h2>
 <p>{text.length>0?text:"Enter something in the textbox to preview it here"}</p>
