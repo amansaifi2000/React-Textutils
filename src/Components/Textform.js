@@ -73,16 +73,16 @@ export default function Textform(props) {
     <>
     <div className= "Container" style = {{color:props.mode === 'dark'?'white':'#092f48'}} >
 <div className="mb-3">
-<h1>{props.heading}</h1>
+<h1 className = "mb-4">{props.heading}</h1>
 <textarea className="form-control" value={text}onChange={handleonChange} style = {{backgroundColor: props.mode 
     === 'dark'?'grey':'white', color:props.mode === 'dark'?'white':'#092f48'}}id="mybox" rows="8"></textarea>
 </div>
-<button className="btn btn-primary mx-1" onClick={handleUpclick}>Convert to Uppercase</button>
-<button className="btn btn-primary mx-1" onClick={handleLoclick}>Convert to Lowercase</button>
-<button className="btn btn-primary mx-1" onClick={handleSeclick}>Sentence Case</button>
-<button className="btn btn-primary mx-1" onClick={handleCaclick}>Capital Letters</button>
-<button className="btn btn-primary mx-1" onClick={handleExclick}>Remove Extra Spaces</button>
-<button className="btn btn-primary mx-1" onClick={handleDeclick}>Clear Text</button>
+<button className="btn btn-primary mx-1 my-1" onClick={handleUpclick}>Convert to Uppercase</button>
+<button className="btn btn-primary mx-1 my-1" onClick={handleLoclick}>Convert to Lowercase</button>
+<button className="btn btn-primary mx-1 my-1" onClick={handleSeclick}>Sentence Case</button>
+<button className="btn btn-primary mx-1 my-1" onClick={handleCaclick}>Capital Letters</button>
+<button className="btn btn-primary mx-1 my-1" onClick={handleExclick}>Remove Extra Spaces</button>
+<button className="btn btn-primary mx-1 my-1" onClick={handleDeclick}>Clear Text</button>
 </div>
 <div className = "Container my-3" style = {{color : props.mode === 'dark'?'white':'#092f48'}}>
 <h2>Text Summary</h2>

@@ -36,7 +36,7 @@ return (
 <Navbar title = "Try Textutils" mode={mode} toggleMode={toggleMode}/>
 <Alert alert = {alert}/>
 <div className = "container my-3">
-<Textform showAlert = {showAlert} heading="Enter Your Thoughts" mode = {mode}/>
+<Textform showAlert = {showAlert} heading="Try Textutils - Word Converter, Covert To UpperCase | Convert To LowerCase | Remove Extra Spaces | Clear Text" mode = {mode}/>
 </div>
 </>
   );
